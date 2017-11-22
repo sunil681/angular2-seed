@@ -1,0 +1,14 @@
+RAW PROCESSED DATA: {{processedData | json}}
+
+<table>
+    <tr>
+        <th class="header">name</th>
+        <th class="header">C1</th>
+        <th class="header">C2</th>
+        <th class="header">C3</th>        
+    </tr>
+    <tr *ngFor="let row of names; let idx=index;">
+        <td>{{row}}</td>   
+    </tr>
+</table>
+

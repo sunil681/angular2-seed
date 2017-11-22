@@ -1,0 +1,19 @@
+<p>
+    Click on column headers to sort the data.<BR>
+    First Click -> Asc Order sort<BR>
+    Second Click -> Desc Order sort
+</p>
+<table>
+    <tr>
+        <th class="header" (click)="sort('name')">name</th>
+        <th class="header" (click)="sort('category')">category</th>
+        <th class="header" (click)="sort('amount')">amount</th>
+    </tr>
+    <tr *ngFor="let row of data; let idx=index;">
+        <td>{{row.name}}</td>
+        <td>{{row.category}}</td>
+        <td>{{row.amount}}</td>
+    </tr>
+</table>
+
+<router-outlet></router-outlet>

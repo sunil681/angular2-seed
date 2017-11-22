@@ -14,6 +14,9 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { DataViewerService } from './data-viewer/data-viewer.service';
+import { DataViewerComponent } from './data-viewer/data-viewer.component';
+import {  DataProcessorComponent} from './data-viewer/data-processor/data-processor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { ContactComponent } from './contact/contact.component';
     RepoListComponent,
     RepoDetailComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    DataViewerComponent,
+    DataProcessorComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { ContactComponent } from './contact/contact.component';
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
-    GithubService
+    GithubService,
+    DataViewerService
   ],
   bootstrap: [ AppComponent ]
 })

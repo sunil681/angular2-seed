@@ -6,6 +6,8 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
+import { DataViewerComponent } from './data-viewer/data-viewer.component';
+import { DataProcessorComponent } from './data-viewer/data-processor/data-processor.component';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,6 +23,7 @@ export const rootRouterConfig: Routes = [
         ]
       }]
   },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'data', component: DataViewerComponent, children: [ {path : 'process-list', component: DataProcessorComponent }] }
 ];
 
